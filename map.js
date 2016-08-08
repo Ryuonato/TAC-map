@@ -2,7 +2,7 @@ var map;
 function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(40.71435,-38.00597),
-          zoom: 3,
+          zoom: 4,
           mapTypeId: google.maps.MapTypeId.SATELLITE,
           navigationControlOptions: {
             style: google.maps.NavigationControlStyle.SMALL,
