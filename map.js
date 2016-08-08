@@ -1,31 +1,27 @@
 var map;
 function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(40.71435,-38.00597),
-          zoom: 4,
-          mapTypeId: google.maps.MapTypeId.SATELLITE,
-          navigationControlOptions: {
-            style: google.maps.NavigationControlStyle.SMALL,
-          }
+        	center: new google.maps.LatLng(40.71435,-38.00597),
+        	zoom: 4,
+        	mapTypeId: google.maps.MapTypeId.SATELLITE,
+        	navigationControlOptions: {
+        		style: google.maps.NavigationControlStyle.SMALL,
+        	}
         };
-
-var map = new google.maps.Map(document.getElementById("map"),mapOptions);
-
-
-var layer = new google.maps.FusionTablesLayer({
-	query: {
-		select: 'location',
-		from: '1BkkG2nCVzFvvott2H2gPUb0eghfR7Nk37UZ76wQ',
-  	}, 
-  	options: {
-  		styleId: 4,
-  		templateId: 5
-  	},
-  	styles: [{
-  		markerOptions: {iconName: 'red_blank'}
-      }]
+	var map = new google.maps.Map(document.getElementById("map"),mapOptions);
+	var layer = new google.maps.FusionTablesLayer({
+		query: {
+			select: 'location',
+			from: '1BkkG2nCVzFvvott2H2gPUb0eghfR7Nk37UZ76wQ',
+  		}, 
+  		options: {
+  			styleId: 4,
+  			templateId: 5
+  		},
+  		styles: [{
+  			markerOptions: {iconName: 'red_blank'}
+  		}]
 });
-
 layer.setMap(map);
 }
 
