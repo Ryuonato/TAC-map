@@ -11,6 +11,7 @@ function initialize() {
 
 var map = new google.maps.Map(document.getElementById("map"),mapOptions);
 
+
 var layer = new google.maps.FusionTablesLayer({
 	query: {
 		select: 'location',
@@ -30,6 +31,8 @@ layer.setMap(map);
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
+/* Addition Unreleased Feature
 $(document).ready(function(){
 	console.log('ready!');
 	$("#check1").change(function() {
@@ -40,6 +43,4 @@ $(document).ready(function(){
 	}).change();
 
 });
-
-
-
+*/
